@@ -11,7 +11,7 @@ h1 {
     font-size: 4rem;
 }
 
-p {
+#header-para {
     text-align: center;
     line-height: 3rem;
     font-size: 1.3rem;
@@ -48,4 +48,10 @@ form {
 .kadane-max {
     text-align: center;
     font-size: 3rem;
+}
+
+#footer-para {
+    text-align: center;
+    size: 0.2rem;
+    margin-top: 100px;
 }
