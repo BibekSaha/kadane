@@ -28,8 +28,8 @@ function kadane(array, limit) {
     let maxFar = array[0],
         maxEnd = array[0];
     for (let i = 1; i < limit; i++) {
-        maxFar = Math.max(array[i], maxFar + array[i]);
-        maxEnd = Math.max(maxEnd, maxFar);
+        maxEnd = Math.max(array[i], maxEnd + array[i]);
+        maxFar = Math.max(maxEnd, maxFar);
     }
     return maxFar;
 }
