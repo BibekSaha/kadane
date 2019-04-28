@@ -4,7 +4,8 @@ const kadaneMax = document.querySelector(".kadane-max");
 const footerPara = document.querySelector("#footer-para")
 let eventCount = 0;
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+    e.preventDefault;
     const limit = Number(document.querySelector("#limit").value);
     const array = convertToNumberArray(document.querySelector("#array").value.split(","));
     if ( (eventCount === 0) && (limit != "") && (document.querySelector("#array").value != "") ) {
