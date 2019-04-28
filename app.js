@@ -1,15 +1,17 @@
 const btn = document.querySelector("#submit");
 const arrayPrint = document.querySelector(".array-print");
 const kadaneMax = document.querySelector(".kadane-max");
+const footerPara = document.querySelector("#footer-para")
 let eventCount = 0;
 
 btn.addEventListener("click", () => {
-    if (eventCount === 0) {
-        const limit = Number(document.querySelector("#limit").value);
-        const array = convertToNumberArray(document.querySelector("#array").value.split(","));
+    const limit = Number(document.querySelector("#limit").value);
+    const array = convertToNumberArray(document.querySelector("#array").value.split(","));
+    if ( (eventCount === 0) && (limit != "") && (document.querySelector("#array").value != "") ) {
         const KaadneMaxValue = kadane(array, limit);
         attachToDocument(array, arrayPrint, "Array is ");
         attachToDocument(KaadneMaxValue, kadaneMax, "Max subarray sum is ");
+        attachToDocument("Refresh to test with new data", footerPara, "");
         eventCount++;
     }
 })
