@@ -5,7 +5,6 @@ const footerPara = document.querySelector("#footer-para")
 let eventCount = 0;
 
 btn.addEventListener("click", (e) => {
-    e.preventDefault;
     const limit = Number(document.querySelector("#limit").value);
     const array = convertToNumberArray(document.querySelector("#array").value.split(","));
     if ( (eventCount === 0) && (limit != "") && (document.querySelector("#array").value != "") ) {
@@ -15,6 +14,7 @@ btn.addEventListener("click", (e) => {
         attachToDocument("Refresh to test with new data", footerPara, "");
         eventCount++;
     }
+    e.preventDefault();
 })
 
 function convertToNumberArray(array) {
