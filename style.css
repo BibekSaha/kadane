@@ -61,7 +61,7 @@ form {
  * STYLING FOR MOBILE DEVICES
  */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   h1 {
     max-width: 70%; 
     font-size: 1.75rem;
