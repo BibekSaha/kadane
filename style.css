@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  max-height: 100vh;
+}
+
 h1 {
   text-align: center;
   margin: auto;
@@ -58,10 +62,10 @@ form {
 }
 
 /*
- * STYLING FOR MOBILE DEVICES
+ * STYLING FOR MOBILE DEVICES --> Smartphone breakpoint
  */
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px){
   h1 {
     max-width: 70%; 
     font-size: 1.75rem;
@@ -90,3 +94,22 @@ form {
     margin-top: 50px;
   }
 }
+
+/*
+ * STYLING FOR TABLETS --> Tablet Breakpoint
+ */
+
+ @media only screen and (min-width: 601px) and (max-width: 925px) {
+   .input {
+     width: 50%;
+   }
+
+   h1 {
+    font-size: 3rem;
+  }
+
+  .array-print,
+  .kadane-max {
+    font-size: 3rem;
+  }
+ }
